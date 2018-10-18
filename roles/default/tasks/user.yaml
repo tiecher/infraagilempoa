@@ -1,0 +1,12 @@
+---
+
+- name: criando os usuario padroes
+  user:
+   name: "{{item.nome}}"
+   shell: "{{item.bash}}"
+   password: "{{item.senha}}"
+   home: "{{item.home}}"
+  with_items:
+   - { nome: ricardo , bash: /bin/bash , senha: '$1$9vAFk6do$GMt9HlGIVs/zax8lLeOWk0' , home: /srv/ricardo } 
+   - { nome: developer , bash: /bin/bash , senha: '$1$9vAFk6do$GMt9HlGIVs/zax8lLeOWk0' , home: /srv/developer } 
+   - { nome: devops , bash: /bin/bash , senha: '$1$9vAFk6do$GMt9HlGIVs/zax8lLeOWk0' , home: /srv/devops } 

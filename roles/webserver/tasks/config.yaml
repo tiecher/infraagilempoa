@@ -1,0 +1,7 @@
+---
+
+- name: copiando o index
+  template: # usado para substituir as tags
+   src: templates/index
+   dest: /var/www/html/index.html
+  notify: restart apache centos

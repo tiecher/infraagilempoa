@@ -1,0 +1,7 @@
+---
+
+- name: Baixando script que faz a instalação do site do docker
+  shell: curl -fsSL https://get.docker.com -o get-docker.sh
+
+- name: Instalando via script
+  shell: sh get-docker.sh

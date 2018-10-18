@@ -1,0 +1,23 @@
+---
+
+- name: minha segunda playbook
+  hosts: all
+  tasks:
+   - name: Adicionando usuario devops
+     user:
+      name: devops
+      password: '$1$v9GD2wG0$UrMQKhcdvxWAza7JrTWis.'
+      shell: /bin/bash
+
+   - name: Adicionando usuario developer
+     user:
+      name: developer
+      password: '$1$v9GD2wG0$UrMQKhcdvxWAza7JrTWis.'
+      shell: /bin/bash
+
+   - name: Adicionando usuario ricardo_tiecher
+     user:
+      name: ricardo
+      password: '$1$v9GD2wG00$UrMQKhcdvxWAza7JrTWis.'
+      shell: /bin/bash
+

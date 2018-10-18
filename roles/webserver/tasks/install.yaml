@@ -1,0 +1,13 @@
+---
+
+- name: instalando apache2
+  package:
+   name: apache2
+   state: present
+  when: ansible_os_family == "Debian"
+
+- name: instalando httpd
+  package:
+   name: httpd
+   state: present
+  when: ansible_os_family == "RedHat"

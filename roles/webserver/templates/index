@@ -1,0 +1,12 @@
+<marquee>
+<h1>
+{{time}} nao tem mundial
+<br>
+nome da maquina: {{ansible_hostname}}
+<br>
+familia da maquina: {{ansible_os_family}}
+<br>
+ip da maquina: {{ansible_default_ipv4.address}}
+
+</h1>
+</marquee>

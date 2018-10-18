@@ -1,0 +1,13 @@
+---
+
+- name: instalando puppet-agent em todos as maquinas
+  package:
+   name: puppet-agent
+   state: present
+   update_cache: yes
+
+- name: Start no puppet quando for redhat
+  service:
+   name: puppet
+   state: restarted
+  when: ansible_os_family == "RedHat"

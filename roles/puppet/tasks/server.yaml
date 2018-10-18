@@ -1,0 +1,13 @@
+---
+
+- name: instalando o puppetserver
+  package:
+   name: puppetserver
+   state: present
+  when: ansible_hostname == "devops"
+
+- name: Start no puppet-server quando for redhat
+  service:
+   name: puppetserver
+   state: restarted
+  when: ansible_hostname == "devops"

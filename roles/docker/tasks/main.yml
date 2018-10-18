@@ -1,0 +1,5 @@
+---
+# tasks file for docker
+
+- name : baixando e instalando script
+  include: script.yaml

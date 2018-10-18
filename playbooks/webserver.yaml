@@ -1,0 +1,6 @@
+---
+
+- name: Instalando um webserver
+  hosts: all
+  roles:
+   - webserver

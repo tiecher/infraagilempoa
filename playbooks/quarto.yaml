@@ -1,0 +1,27 @@
+---
+
+- name: criando um servidor web
+  hosts: all
+  tasks:
+   - name: usuarios comuns do sistema
+     user:
+      name: "{{item}}" # como se fosse um FOR
+      password: '$1$v9GD2wG0$UrMQKhcdvxWAza7JrTWis.'
+      shell: /bin/bash
+     with_items:
+      - devops
+      - developer
+      - ricardo
+
+   - name: instalando apache2
+     package:
+      name: apache2
+      state: present
+     when: ansible_os_family == "Debian"
+
+   - name: instalando httpd
+     package:
+      name: httpd
+      state: present
+     when: ansible_os_family == "RedHat"
+
